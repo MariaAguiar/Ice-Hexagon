@@ -1,0 +1,71 @@
+/* CSS Document */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgba(60, 60, 60, 0.9);
+}
+
+.center {
+  position: absolute;
+  left: 50%;
+  margin-left: -100px;
+  width: 200px;
+  top: 50%;
+  height: 173.2px;
+  margin-top: -86.6px;
+}
+
+svg {
+  position: absolute;
+  transform-origin: center center;
+  transition: transform 1.5s;
+}
+
+svg > path, svg > polygon {
+  position: absolute;
+  transform-origin: center center;
+}
+
+#p2 {
+  transform: scale(0.65) translateZ(50px);
+}
+
+#pol2 {
+  transform: rotateX(180deg);
+}
+
+#pol3 {
+  transform: rotateX(180deg) rotateY(-180deg) rotateZ(-60deg);
+}
+
+#pol4 {
+  transform: rotateZ(180deg);
+}
+
+#pol5 {
+  transform: rotateY(180deg);
+}
+
+#pol6 {
+  transform: rotateZ(-60deg);
+}
+
+.loading_cont {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 50%;
+  left: 50%;
+  margin-left: -960px;
+  margin-top: -540px;
+}
+
+.water {
+  -webkit-filter: url("#goo");
+  filter: url("#goo");
+}
+
+/*# sourceMappingURL=photogr2.css.map */

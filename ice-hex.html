@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <link href="ice-hex.css" rel="stylesheet">
+        <script src="ice-hex.js" type="application/javascript"> </script>
+        <title>Melting Hexagon</title>
+    </head>
+    
+    <body>
+        
+        <div class="loading_cont">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" id="loader" width="1920px" height="1080px" viewbox="0 0 1920 1080" preserveAspectRatio="XMinYMin meet">
+                <defs>
+                    <filter id="water">
+                        <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                        <feBlend in2="goo" in="SourceGraphic" result="mix" />
+                    </filter>
+                    <linearGradient id="gradient">
+                        <stop offset="0%"  stop-color="lightcyan"/>
+                        <stop offset="100%" stop-color="darkcyan"/>
+                    </linearGradient>
+                </defs>
+                <mask id="mask">
+                </mask>
+                <rect x="0" y="0"  mask="url(#mask)" fill="url(#gradient)" width="1920px" height="1080px"></rect>
+            </svg>	
+        </div>
+        
+        <div id="m" class="center">            
+            <svg id="h1" xmlns="http://www.w3.org/2000/svg" width="200px" height="173.7px" viewbox="0 0 200 173.7" stroke="grey" stroke-width="0.5px" stroke-linecap="butt" preserveAspectRatio="XMinYMin meet">
+                
+                <defs>
+                    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:lightcyan;stop-opacity:0.35" />
+                        <stop offset="100%" style="stop-color:darkcyan;stop-opacity:0.25" />
+                    </linearGradient> 
+                </defs>
+                
+                <path id="p0" d="M100 86.85Z"/>
+                <path id="p1" fill="lightgray" d="M0 86.6 L50 0 L150 0 L200 86.6 L150 173.2 L50 173.2Z"/>
+                <path id="p2" onmouseover="interacts(event)" fill="url(#g1)" d="M0 86.6 L50 0 L150 0 L200 86.6 L150 173.2 L50 173.2Z"/>
+                
+                <polygon id="pol1" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>
+                <polygon id="pol2" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>
+                <polygon id="pol3" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>
+                <polygon id="pol4" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>
+                <polygon id="pol5" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>
+                <polygon id="pol6" fill="url(#g1)" points="0,86.6 35,86.6875 67.5005,142.977 50.0007,173.2"/>    
+            </svg>
+        </div>
+    </body>
+</html>
